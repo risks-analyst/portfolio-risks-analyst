@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>risks-analyst — Blockchain Data Engineer</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:#0b0f14;
+  color:#ffffff;
+  font-family:Inter, Arial, sans-serif;
+  padding:60px 24px;
+  line-height:1.6;
+}
+.container { width:100%; max-width:1000px; margin:auto; }
+section { margin-bottom:100px; }
+
+/* HERO */
+.eyebrow { color:#7d8590; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:20px; }
+.hero-title { font-size:52px; font-weight:700; line-height:1.1; margin-bottom:20px; max-width:700px; }
+.hero-title span { color:#3fb950; }
+.hero-text { color:#9aa4b2; max-width:580px; font-size:17px; margin-bottom:30px; }
+.links { display:flex; gap:12px; flex-wrap:wrap; }
+.links a {
+  text-decoration:none;
+  color:#ffffff;
+  border:1px solid rgba(255,255,255,0.08);
+  padding:10px 20px;
+  border-radius:14px;
+  font-size:14px;
+  transition:0.2s ease;
+}
+.links a:hover { background:#151b23; border-color:rgba(63,185,80,0.3); }
+
+/* SECTION TITLE */
+.section-title { font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#7d8590; margin-bottom:32px; }
+
+/* PROJECTS */
+.projects { display:flex; flex-direction:column; gap:24px; }
+.project {
+  background:#121821;
+  border:1px solid rgba(255,255,255,0.04);
+  border-radius:24px;
+  padding:28px;
+  transition:0.2s ease;
+}
+.project:hover { border-color:rgba(63,185,80,0.15); }
+.project-image {
+  width:100%;
+  height:220px;
+  border-radius:16px;
+  margin-bottom:24px;
+  object-fit:cover;
+  background:#0d131a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#4b5563;
+  font-size:13px;
+  overflow:hidden;
+}
+.project-image img { width:100%; height:100%; object-fit:cover; border-radius:16px; }
+.project-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+.project-title { font-size:26px; font-weight:700; }
+.project-badge { font-size:12px; color:#3fb950; border:1px solid rgba(63,185,80,0.3); padding:4px 12px; border-radius:20px; }
+.project-description { color:#b6c2cf; max-width:700px; margin-bottom:16px; font-size:15px; line-height:1.7; }
+.project-stack { color:#7d8590; font-size:13px; margin-bottom:24px; }
+.project-buttons { display:flex; gap:12px; }
+.project-buttons a {
+  text-decoration:none;
+  color:#ffffff;
+  background:#1c2530;
+  padding:10px 20px;
+  border-radius:12px;
+  font-size:14px;
+  transition:0.2s ease;
+}
+.project-buttons a:hover { background:#263241; }
+.project-buttons a.primary { background:#1a2e1a; color:#3fb950; }
+.project-buttons a.primary:hover { background:#213821; }
+
+/* STACK */
+.stack-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:20px; }
+.stack-card { background:#121821; border-radius:20px; padding:24px; border:1px solid rgba(255,255,255,0.04); }
+.stack-card h3 { margin-bottom:16px; font-size:16px; color:#3fb950; }
+.stack-card ul { list-style:none; }
+.stack-card li { color:#9aa4b2; margin-bottom:10px; font-size:14px; }
+.stack-card li::before { content:"→ "; color:#3fb950; }
+
+/* ABOUT */
+.about-text { max-width:680px; color:#b6c2cf; font-size:17px; line-height:1.8; }
+
+/* FOOTER */
+.footer { border-top:1px solid rgba(255,255,255,0.05); padding-top:30px; color:#7d8590; font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.footer a { color:#7d8590; text-decoration:none; }
+.footer a:hover { color:#3fb950; }
+
+@media(max-width:768px) {
+  .hero-title { font-size:36px; }
+  .project-header { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <section>
+    <div class="eyebrow">Blockchain Engineer</div>
+    <div class="hero-title">
+      Building intelligence<br>for the <span>Ethereum</span><br>ecosystem.
+    </div>
+    <div class="hero-text">
+      Real-time monitoring systems, ETL pipelines, on-chain analytics, and Web3 security tooling. Focused on turning raw blockchain data into actionable intelligence.
+    </div>
+    <div class="links">
+      <a href="https://github.com/risks-analyst" target="_blank">GitHub</a>
+      <a href="mailto:juanrttgg@gmail.com">Email</a>
+      <a href="https://onchain-intelligence-dashboard.onrender.com" target="_blank">Live Demo</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="section-title">Projects</div>
+    <div class="projects">
+
+      <div class="project">
+        <div class="project-image">
+          <img src="assets/risk.png" alt="ETH Risk Analyzer" onerror="this.parentElement.innerText='ETH Transaction Risk Analyzer'"/>
+        </div>
+        <div class="project-header">
+          <div class="project-title">ETH Transaction Risk Analyzer</div>
+          <div class="project-badge">Security Tooling</div>
+        </div>
+        <div class="project-description">
+          Real-time Ethereum transaction risk assessment system. Decodes raw on-chain data, classifies transaction types using ABI selectors, and generates probabilistic risk explanations in plain English.
+        </div>
+        <div class="project-stack">Python · Flask · web3.py · Ethereum RPC</div>
+        <div class="project-buttons">
+          <a href="https://github.com/risks-analyst/eth-transaction-risk-analyzer" target="_blank">GitHub</a>
+          <a class="primary" href="https://eth-transaction-risk-analyzer.onrender.com" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="assets/whale.png" alt="Whale Alert" onerror="this.parentElement.innerText='Ethereum Whale Alert'"/>
+        </div>
+        <div class="project-header">
+          <div class="project-title">Ethereum Whale Alert</div>
+          <div class="project-badge">Real-Time Monitoring</div>
+        </div>
+        <div class="project-description">
+          Real-time whale transaction monitor that scans every Ethereum block and surfaces large ETH movements with color-coded risk levels, direct Etherscan links, and optional Telegram alerts.
+        </div>
+        <div class="project-stack">Python · Flask · web3.py · Telegram Bot API</div>
+        <div class="project-buttons">
+          <a href="https://github.com/risks-analyst/ethereum-whale-alert" target="_blank">GitHub</a>
+          <a class="primary" href="https://ethereum-whale-alert.onrender.com" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="assets/etl.png" alt="ETL Pipeline" onerror="this.parentElement.innerText='Blockchain ETL Pipeline'"/>
+        </div>
+        <div class="project-header">
+          <div class="project-title">Blockchain ETL Pipeline</div>
+          <div class="project-badge">Data Engineering</div>
+        </div>
+        <div class="project-description">
+          Lightweight ETL pipeline that continuously extracts Ethereum blocks and full transactions, transforms raw hex data, classifies operation types, and loads structured records into a relational database for rapid analytics.
+        </div>
+        <div class="project-stack">Python · Flask · web3.py · SQLite · ETL</div>
+        <div class="project-buttons">
+          <a href="https://github.com/risks-analyst/ethereum-etl-pipeline" target="_blank">GitHub</a>
+          <a class="primary" href="https://eth-etl-pipeline.onrender.com" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="assets/dashboard.png" alt="Dashboard" onerror="this.parentElement.innerText='On-Chain Intelligence Dashboard'"/>
+        </div>
+        <div class="project-header">
+          <div class="project-title">On-Chain Intelligence Dashboard</div>
+          <div class="project-badge">Analytics</div>
+        </div>
+        <div class="project-description">
+          Real-time analytics dashboard monitoring live Ethereum block streams, gas fee trends, transaction type dominance, and volumetric ETH flows. Updates every 15 seconds from mainnet data.
+        </div>
+        <div class="project-stack">Python · Flask · web3.py · JavaScript · Real-Time</div>
+        <div class="project-buttons">
+          <a href="https://github.com/risks-analyst/onchain-intelligence-dashboard" target="_blank">GitHub</a>
+          <a class="primary" href="https://onchain-intelligence-dashboard.onrender.com" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section>
+    <div class="section-title">Stack</div>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h3>Backend</h3>
+        <ul>
+          <li>Python</li>
+          <li>Flask</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+      <div class="stack-card">
+        <h3>Blockchain</h3>
+        <ul>
+          <li>web3.py</li>
+          <li>Ethereum RPC</li>
+          <li>ERC-20 Standards</li>
+          <li>ABI Decoding</li>
+        </ul>
+      </div>
+      <div class="stack-card">
+        <h3>Data</h3>
+        <ul>
+          <li>ETL Pipelines</li>
+          <li>SQLite</li>
+          <li>Real-Time Indexing</li>
+          <li>On-Chain Analytics</li>
+        </ul>
+      </div>
+      <div class="stack-card">
+        <h3>Infrastructure</h3>
+        <ul>
+          <li>GitHub</li>
+          <li>Render</li>
+          <li>Linux / WSL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="section-title">About</div>
+    <div class="about-text">
+      Focused on blockchain analytics, ETL systems, real-time monitoring pipelines, and Web3 security tooling. Building tools that transform raw on-chain data into actionable intelligence.
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>© 2026 risks-analyst</span>
+    <span>
+      <a href="https://github.com/risks-analyst" target="_blank">GitHub</a> · 
+      <a href="mailto:risks_analyzer@proton.me.com">risks_analyzer@proton.me.com</a>
+    </span>
+  </div>
+
+</div>
+</body>
+</html>
